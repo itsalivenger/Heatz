@@ -14,6 +14,12 @@ const HeroSection = () => {
     { type: 'video', src: './videos/sample.mp4' },
     { type: 'image', src: './images/flayers/sample.png' },
     { type: 'video', src: './videos/sample.mp4' },
+    { type: 'image', src: './images/flayers/sample.png' },
+    { type: 'video', src: './videos/sample.mp4' },
+    { type: 'image', src: './images/flayers/sample.png' },
+    { type: 'video', src: './videos/sample.mp4' },
+    { type: 'image', src: './images/flayers/sample.png' },
+    { type: 'video', src: './videos/sample.mp4' },
   ];
 
   const settings = {
@@ -22,7 +28,7 @@ const HeroSection = () => {
     autoplay: true,
     autoplaySpeed: 5000,
     infinite: true,
-    beforeChange: (oldIndex, newIndex) => setCurrentSlide(newIndex), // Update currentSlide before the transition
+    beforeChange: (newIndex) => setCurrentSlide(newIndex),
   };
 
   const handleNavClick = (index) => {
@@ -53,26 +59,28 @@ const HeroSection = () => {
       </Slider>
 
       {/* Navigation Thumbnails */}
-      <div className={styles.navigation}>
-        {items.map((item, index) => (
-          <div
-            key={index}
-            onClick={() => console.log('object')} // Click to navigate
-            className={`${styles.navItem} ${currentSlide === index ? styles.active : ''}`}
-          >
-            {item.type === 'image' ? (
-              <img onClick={() => handleNavClick(index)} src={item.src} alt={`nav-thumb-${index}`} className={styles.thumbImage} />
-            ) : (
-              <video
-                src={item.src}
-                onClick={() => handleNavClick(index)}
-                muted
-                loop
-                className={styles.thumbVideo}
-              />
-            )}
-          </div>
-        ))}
+      <div className={styles.navigationContainer}>
+        <div className={styles.navigation}>
+          {items.map((item, index) => (
+            <div
+              key={index}
+              onClick={() => console.log('object')} // Click to navigate
+              className={`${styles.navItem} ${currentSlide === index ? styles.active : ''}`}
+            >
+              {item.type === 'image' ? (
+                <img onClick={() => handleNavClick(index)} src={item.src} alt={`nav-thumb-${index}`} className={styles.thumbImage} />
+              ) : (
+                <video
+                  src={item.src}
+                  onClick={() => handleNavClick(index)}
+                  muted
+                  loop
+                  className={styles.thumbVideo}
+                />
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -17,10 +17,22 @@
     height: auto; /* Maintain aspect ratio */
     object-fit: cover;
   }
+
+  .navigationContainer {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+  }
   
   .navigation {
     display: flex;
     justify-content: center;
+    background-color: #0000007a;
+    border-radius: 50px;
+    padding: 1em 0;
+    width: 60%;
     gap: 10px;
     margin-top: 15px;
   }

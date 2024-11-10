@@ -1,79 +1,104 @@
-import React from 'react';
 import Slider from 'react-slick';
 import styles from './heroCarousel.module.css';
-
-const items = [
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+const slides = [
   {
-    title: "Boost up your Audio experience.",
-    description: "Experience immersive audio with cutting-edge technology. Perfect for gaming and music enthusiasts.",
-    buttonText: "Learn more",
-    backgroundImage: './images/slide1.png',
+      title: "Boost Up Your Audio Experience",
+      description: "Discover amazing products and browse throught a huge collection.",
+      buttonText: "Learn More",
+      backgroundImage: "https://via.placeholder.com/1920x1080"
   },
   {
-    title: "Revolutionize your Game Setup.",
-    description: "Discover the ultimate gaming setup tailored for high performance and seamless play.",
-    buttonText: "Shop now",
-    backgroundImage: './images/slide2.png',
+      title: "Slide 2",
+      description: "Description for Slide 2",
+      buttonText: "Button 2",
+      backgroundImage: "./images/flayers/sample.png",
   },
   {
-    title: "Enhance Visual Clarity.",
-    description: "Unleash the true potential of 4K visuals with our latest displays and graphics.",
-    buttonText: "Explore",
-    backgroundImage: './images/slide3.png',
+      title: "Slide 3",
+      description: "Description for Slide 3",
+      buttonText: "Button 3",
+      backgroundImage: "./images/flayers/sample.png",
   },
 ];
+
+const Slide = ({ title, description, buttonText, backgroundImage }) => {
+  return (
+    <div className={styles.contentBlock}>
+      <img src={backgroundImage} alt="Background" className={styles.backgroundImage} />
+      <div className={styles.overlay}>
+        <h1 className={styles.title}>{title}</h1>
+        <p className={styles.description}>{description}</p>
+        <button className={styles.button}>{buttonText}</button>
+      </div>
+    </div>
+  );
+};
 
 const HeroCarousel = () => {
   const settings = {
     dots: true,
+    customPaging: (i) => (
+      <div className={styles.customDot} />
+    ),
+    dotsClass: `slick-dots ${styles.customDots}`,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: true,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    prevArrow: <Arrow direction="left" />,
+    nextArrow: <Arrow direction="right" />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 768,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <Slider {...settings} className={styles.carouselContainer}>
-      {items.map((item, index) => (
-        <div key={index} className={styles.slide} style={{ backgroundImage: `url(${item.backgroundImage})` }}>
-          <div className={styles.overlay}>
-            <h2 className={styles.title}>{item.title}</h2>
-            <p className={styles.description}>{item.description}</p>
-            <button className={styles.button}>{item.buttonText}</button>
+    <div className={styles.carouselContainer}>
+      <Slider {...settings}>
+        {slides.map((slide, index) => (
+          <div key={index} className={styles.slide}>
+            <Slide title={slide.title} description={slide.description} buttonText={slide.buttonText} backgroundImage={slide.backgroundImage} />
           </div>
-        </div>
-      ))}
-    </Slider>
+        ))}
+      </Slider>
+    </div>
   );
 };
 
-// Custom Next Arrow
-const SampleNextArrow = (props) => {
-  const { className, style, onClick } = props;
+
+const Arrow = ({ direction, onClick }) => {
+
   return (
-    <div
-      className={`${className} ${styles.arrow} ${styles.nextArrow}`}
-      style={{ ...style }}
-      onClick={onClick}
-    />
+    <div onClick={onClick} className={`${styles["arrow"]} ${direction === 'right' ? styles["right"] : styles["left"]}`}>
+      <div className={styles["arrow-top"]}></div>
+      <div className={styles["arrow-bottom"]}></div>
+    </div>
   );
 };
 
-// Custom Prev Arrow
-const SamplePrevArrow = (props) => {
-  const { className, style, onClick } = props;
-  return (
-    <div
-      className={`${className} ${styles.arrow} ${styles.prevArrow}`}
-      style={{ ...style }}
-      onClick={onClick}
-    />
-  );
-};
+
+
 
 export default HeroCarousel;
