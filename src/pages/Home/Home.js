@@ -1,10 +1,11 @@
-import ColoredDivider from "../components/coloredHr/coloredDivider";
-import HeroCarousel from "../components/heroCarousel/herocarousel";
-import HeroSection from "../components/heroSection/HeroSection";
-import HeroText from "../components/heroText/heroText";
-import ImageAndVideo from "../components/ImageAndVideo/imageAndVideo";
-import ProductsCardsCarousel from "../components/ProductsCardsCarousel/productsCardsCarousel";
-import ProductsCarousel from "../components/ProductsCarousel/productsCarousel";
+import ColoredDivider from "../../components/coloredHr/coloredDivider";
+import HeroCarousel from "../../components/heroCarousel/herocarousel";
+import HeroSection from "../../components/heroSection/HeroSection";
+import HeroText from "../../components/heroText/heroText";
+import ImageAndVideo from "../../components/ImageAndVideo/imageAndVideo";
+import ImageCarousel from "../../components/ImageGallery/imageGallery";
+import ProductsCardsCarousel from "../../components/ProductsCardsCarousel/productsCardsCarousel";
+import ProductsCarousel from "../../components/ProductsCarousel/productsCarousel";
 
 
 const products = [
@@ -91,7 +92,7 @@ function Home() {
             <ColoredDivider />
             <ImageAndVideo img={"./images/flayers/sample.png"} vid={"./videos/heroVid.mp4"} />
             <HeroText heading={"Trending Products"} description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`} />
-
+            <ImageCarousel />
         </div>
     );
 }

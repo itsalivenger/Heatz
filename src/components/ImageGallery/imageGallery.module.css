@@ -1,0 +1,13 @@
+.carousel-container {
+    width: 100%;
+}
+
+.carousel-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.slick-slide {
+    margin: 0;
+}

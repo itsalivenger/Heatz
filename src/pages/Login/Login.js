@@ -1,15 +1,32 @@
-const checkDiv = document.getElementsByClassName('check-div')[0];
-var checked = false;
+import styles from "./LoginPage.module.css";
 
-checkDiv.onclick = function() {
-    if (!checked) {
-        checkDiv.style.border = '1px solid rgb(0, 228, 137)';
-        checkDiv.style.backgroundColor = 'rgb(0, 228, 137)';
-        checked = true;
-    }
-    else {
-        checkDiv.style.border = '1px solid rgb(0, 98, 59)';
-        checkDiv.style.backgroundColor = 'rgb(32, 32, 32)';
-        checked = false;
-    }
+function LoginPage() {
+    return (
+        <div className={styles["container"]}>
+            <div className={styles["pseudo-body"]}>
+                <div className={styles["form-container"]}>
+                    <h1>Connexion avec E-mail</h1>
+                    <p>Vous n'avez pas encore de compte ? <span className={styles["create-account"]}>Créer un compte</span></p>
+                    <hr></hr>
+
+                    <div className={styles["input-container"]}>
+                        <div className={styles.inputContainer}>
+                            <label>E-Mail *</label>
+                            <input type="email" placeholder="Email@example.xyz" required />
+                        </div>
+                        <div className={styles.inputContainer}>
+                            <label>Mot de passe *</label>
+                            <input type="password" placeholder="Mot de passe" required />
+                        </div>
+                    </div>
+
+                    <button className={styles["login-btn"]}>CONNEXION</button>
+
+                    <div className={styles["forgot-password-div"]}>Mot de passe oublié ? <span className={styles["reset"]}>Réinitialiser le mot de passe</span></div>
+                </div>
+            </div>
+        </div>
+    );
 }
+
+export default LoginPage;

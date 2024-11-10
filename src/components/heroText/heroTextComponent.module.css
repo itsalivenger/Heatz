@@ -30,6 +30,34 @@
     line-height: 1.6;
     max-width: 400px;
   }
+
+  .column {
+    flex: 1;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .right{
+    align-items: flex-end;
+    text-align: right;
+  }
+
+  .left{
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .textSection p, .textSection h1 {
+    margin: 10px;
+  }
+
+  .lWidth p, .lWidth h1 {
+    max-width: 80%;
+  }
+
+  .mWidth p, .mWidth h1 {
+    max-width: 60%;
+  }
   
   /* Responsive Adjustments */
   @media (max-width: 1024px) {

@@ -1,7 +1,8 @@
-.container{
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     background-color: rgb(26, 26, 26);
     padding: 150px 0;
 }
@@ -13,6 +14,7 @@
     align-items: center;
     height: 100%;
     width: 100%;
+    background-color: rgb(26, 26, 26);
 }
 
 .form-container {
@@ -22,9 +24,9 @@
     flex-direction: column;
     font-family: Arial, sans-serif;
     background-color: rgb(32, 32, 32);
-    padding: 30px 20px;
+    padding: 40px 20px;
     border-radius: 30px;
-    width: 550px;
+    width: 600px;
     height: fit-content;
     text-align: center;
     border: 1px solid rgb(50, 50, 50);
@@ -62,24 +64,24 @@
     background-color: rgb(50, 50, 50);
 }
 
-.form-container input {
+.input-container input {
     padding: 15px 25px;
     background: rgb(26, 26, 26);
     color: #fff;
     border: 1px solid #2a5a47;
     border-radius: 15px;
-    margin: 15px 0px;
+    margin-top: 15px;
     width: 100%;
     box-sizing: border-box;
     transition: border 0.3s ease-in-out;
 }
 
-.form-container input:focus {
+.input-container input:focus {
     border-color: #01dc84;
     outline: 1px solid rgb(0, 228, 137);
 }
 
-.login-btn {
+.reset-btn {
     width: 90%;
     padding: 20px 0px;
     background-color: rgb(0, 228, 137);
@@ -91,26 +93,19 @@
     margin: 30px 0px 20px 0px;
 }
 
-.login-btn:hover {
+.reset-btn:hover {
     background-color: rgb(0, 122, 73);
 }
 
-.forgot-password-div {
+.resend-div {
     color: rgb(210, 210, 210);
     font-size: 0.8rem;
 }
 
-.reset,
-.create-account {
+.resend {
     color: rgb(0, 228, 137);
     text-decoration: underline;
     cursor: pointer;
-}
-
-.inputContainer {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
 }
 
 @media only screen and (max-width: 700px) {
