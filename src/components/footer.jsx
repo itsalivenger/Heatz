@@ -1,5 +1,5 @@
 import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import 'bootstrap/dist/css/bootstrap.min.css';
 import { ReactComponent as Logo } from '../assets/heatz-logo.svg';
 
 const Footer = () => {
