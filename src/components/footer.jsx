@@ -1,31 +1,38 @@
 import React from 'react';
-//import 'bootstrap/dist/css/bootstrap.min.css';
 import { ReactComponent as Logo } from '../assets/heatz-logo.svg';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-950 text-gray-300 sm:text-xs md:text-sm lg:text-base">
-      <div className=" w-full py-4 px-8  lg:px-10">
-        {/* Footer content - two columns */}
-        <div className="row">
+    <footer className="bg-gray-950 text-gray-300 sm:text-sm text-base">
+      <div className="w-full p-6 lg:px-20 lg:py-8 md:px-10">
+        {/* Footer content */}
+        <div className="flex flex-col lg:flex-row lg:justify-between">
           {/* Left Column: Logo, Text, Form */}
-          <div className="col-12 col-lg-6 mb-4 lg:mb-0 justify-center py-2">
+          <div className="mb-6 lg:mb-0 lg:w-1/2">
             {/* Logo */}
-            <Logo style={{ width: '200px', height: 'auto' }} alt="Heatz Logo" />
+            <div className="flex justify-center lg:justify-start mb-4">
+              <Logo style={{ width: '150px', height: 'auto' }} alt="Heatz Logo" />
+            </div>
 
             {/* Text */}
-            <section className="text-left my-4">
-              <p>Heatz® is a registered brand of Ashtelgroup. It is registered in different countries, including Saudi Arabia and UAE, especially in the Middle East. Heatz® is well known for its variety and quality of products launched every season.</p>
+            <section className="sm:text-center lg:text-left mb-4">
+              <p className="text-base sm:text-sm lg:text-lg leading-relaxed lg:leading-loose">
+                Heatz® is a registered brand of Ashtelgroup. Known in the Middle East for its product variety and quality, it is registered in various countries including Saudi Arabia and UAE.
+              </p>
             </section>
 
-            {/* Form: Email & Checkbox */}
-            <section className="text-left mb-4">
+            {/* Email Subscription Form */}
+            <section className="text-center lg:text-left mb-4">
               <form>
-                <div className="mb-4 relative">
+                <div className="relative mb-4">
+                  <input
+                    type="email"
+                    className="font-sans text-base sm:text-sm lg:text-lg w-full h-10 border-b border-gray-500 bg-gray-950 pl-10 pr-4 text-gray-300 outline-none focus:ring-1 focus:ring-teal-600"
+                    placeholder="Enter your email"
+                  />
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <svg
                       className="w-4 h-4 text-gray-500"
-                      aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="currentColor"
                       viewBox="0 0 20 16"
@@ -34,91 +41,65 @@ const Footer = () => {
                       <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z" />
                     </svg>
                   </div>
-                  <input
-                    type="email"
-                    className="font-sans text-[14px] w-full h-[40px] border-b border-gray-500 bg-gray-950 pl-10 pr-4 text-gray-300 outline-none focus:outline-teal-600"
-                    placeholder="Enter your email"
-                  />
                 </div>
 
                 {/* Checkbox */}
-                <div className="mb-3">
-                  <div className="form-check">
-                    <input
-                      type="checkbox"
-                      id="privacyPolicy"
-                      className="form-check-input mr-2 w-4 h-4 text-teal-600 bg-gray-700 border-gray-300 rounded focus:ring-2 focus:ring-teal-600"
-                    />
-                    <label htmlFor="privacyPolicy" className="form-check-label text-gray-300">
-                      I accept the <a href="#" className="text-teal-500 no-underline">Privacy Policy</a> and consent to its terms, including the use of cookies.
-                    </label>
-                  </div>
+                <div className="flex items-center mb-4">
+                  <input
+                    type="checkbox"
+                    id="privacyPolicy"
+                    className="form-check-input mr-2 w-4 h-4 text-teal-600 bg-gray-700 border-gray-300 rounded focus:ring-2 focus:ring-teal-600"
+                  />
+                  <label htmlFor="privacyPolicy" className="text-gray-300 text-sm lg:text-base">
+                    I accept the <a href="#" className="text-teal-500">Privacy Policy</a>.
+                  </label>
                 </div>
 
                 {/* Submit Button */}
-                <div className="col-auto">
-                  <button type="submit" className="btn btn-outline-light mb-4">
-                    Subscribe
-                  </button>
-                </div>
+                <button type="submit" className="w-fit py-2 px-8 bg-teal-950 border-white border-[0.5px] text-white rounded-md hover:bg-teal-600 focus:ring-2 focus:ring-teal-600">
+                  Subscribe
+                </button>
               </form>
             </section>
           </div>
 
           {/* Right Column: Links */}
-          <div className="col-12 col-lg-6 mt-4 lg:mt-0 ">
-            <section className="flex flex-wrap text-left justify-center gap-4 px-4 lg:px-10 sm:px-2 ">
-              {/* Category 1 */}
-              <ul className="list-unstyled mx-4">
-                <h5 className="text-uppercase text-gray-300">Mob Acc</h5>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Earphones</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Cables</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Adapters</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Power Bank</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Batteries</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Car Charger</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Holders</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Speakers</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Smartwatches</a></li>
-              </ul>
+          <div className="flex flex-wrap justify-center lg:justify-end lg:w-1/2 " >
+            {/* Category 1 */}
+            <ul className="list-none sm:text-center lg:text-left ">
+              <h5 className="text-gray-300 uppercase text-sm mb-2">Mob Acc</h5>
+              <li><a href="#!" className="text-gray-400 hover:text-teal-400 text-base sm:text-sm lg:text-lg">Earphones</a></li>
+              <li><a href="#!" className="text-gray-400 hover:text-teal-400 text-base sm:text-sm lg:text-lg">Cables</a></li>
+              <li><a href="#!" className="text-gray-400 hover:text-teal-400 text-base sm:text-sm lg:text-lg">Adapters</a></li>
+              <li><a href="#!" className="text-gray-400 hover:text-teal-400 text-base sm:text-sm lg:text-lg">Power Bank</a></li>
+              <li><a href="#!" className="text-gray-400 hover:text-teal-400 text-base sm:text-sm lg:text-lg">Smartwatches</a></li>
+            </ul>
 
-              {/* Category 2 */}
-              <ul className="list-unstyled mx-4">
-                <h5 className="text-uppercase text-gray-100">Com Acc</h5>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Earphones</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Cables</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Adapters</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Power Bank</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Batteries</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Car Charger</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Holders</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Speakers</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Smartwatches</a></li>
-              </ul>
+            {/* Category 2 */}
+            <ul className="list-none sm:text-center lg:text-left ">
+              <h5 className="text-gray-300 uppercase text-sm mb-2">Com Acc</h5>
+              <li><a href="#!" className="text-gray-400 hover:text-teal-400 text-base sm:text-sm lg:text-lg">Earphones</a></li>
+              <li><a href="#!" className="text-gray-400 hover:text-teal-400 text-base sm:text-sm lg:text-lg">Cables</a></li>
+              <li><a href="#!" className="text-gray-400 hover:text-teal-400 text-base sm:text-sm lg:text-lg">Adapters</a></li>
+              <li><a href="#!" className="text-gray-400 hover:text-teal-400 text-base sm:text-sm lg:text-lg">Speakers</a></li>
+            </ul>
 
-              {/* Category 3 */}
-              <ul className="list-unstyled mx-4">
-                <h5 className="text-uppercase text-gray-300">Help</h5>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Contact Us</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">FAQs</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Shipping & Returns</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Payment Methods</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Track Your Order</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">About Us</a></li>
-                <li><a href="#!" className="text-gray-400 hover:text-teal-400 no-underline">Privacy Policy</a></li>
-              </ul>
-            </section>
+            {/* Category 3 */}
+            <ul className="list-none sm:text-center lg:text-left ">
+              <h5 className="text-gray-300 uppercase text-sm mb-2">Help</h5>
+              <li><a href="#!" className="text-gray-400 hover:text-teal-400 text-base sm:text-sm lg:text-lg">Contact Us</a></li>
+              <li><a href="#!" className="text-gray-400 hover:text-teal-400 text-base sm:text-sm lg:text-lg">FAQs</a></li>
+              <li><a href="#!" className="text-gray-400 hover:text-teal-400 text-base sm:text-sm lg:text-lg">Shipping & Returns</a></li>
+              <li><a href="#!" className="text-gray-400 hover:text-teal-400 text-base sm:text-sm lg:text-lg">About Us</a></li>
+            </ul>
           </div>
         </div>
       </div>
 
       {/* Copyright */}
       <div className="bg-gray-950 text-center text-gray-300 py-4">
-        <p className="mb-2 text-sm">
-          &copy; 2024 <span className="font-semibold text-white">Heatz - All rights reserved.</span>
-        </p>
         <p className="text-xs">
-          Developed by <a href="#" className="text-blue-500 hover:text-blue-300">AdAgency Technologies</a>
+          &copy; 2024 <span className="font-semibold text-white">Heatz</span> - All rights reserved. | Developed by <a href="#" className="text-blue-500 hover:text-blue-300">AdAgency Technologies</a>
         </p>
       </div>
     </footer>
