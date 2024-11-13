@@ -24,7 +24,7 @@ function productPreview() {
                                     <img alt={"product"} className={`${styles["small-overview-image"]} ${styles["first"]}`} src="./images/products/item_view1.jpg" />
                                     <img alt={"product"} className={styles["small-overview-image"]} src="./images/products/item_view2.jpg" />
                                 </div>
-                                <div className="small-overview-image-second-row">
+                                <div className={styles["small-overview-image-second-row"]}>
                                     <img alt={"product"} className={styles["small-overview-image"]} src="./images/products/item_view1.jpg" />
                                     <img alt={"product"} className={`${styles["small-overview-image"]} ${styles["fourth"]}`} src="./images/products/item_view1.jpg" />
                                 </div>

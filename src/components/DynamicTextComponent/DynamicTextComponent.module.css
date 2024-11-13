@@ -1,0 +1,79 @@
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0 30px 0;
+  box-sizing: border-box;
+}
+
+/* Dynamic alignment */
+.left {
+  justify-content: flex-start;
+}
+
+.center {
+  justify-content: center;
+  text-align: center;
+}
+
+.right {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+/* Layout styles */
+.titleOverText {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.titleBesidesText {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+}
+
+/* Common styles for title and text */
+.title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.text {
+  font-size: .9rem;
+  line-height: 1.5;
+  color: white;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .titleBesidesText {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .text {
+    font-size: 0.8rem;
+  }
+}

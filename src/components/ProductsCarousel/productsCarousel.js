@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import ProductCard from './productCard';
+import ProductCard from '../productCard/productCard';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import styles from './ProductCarousel.module.css';

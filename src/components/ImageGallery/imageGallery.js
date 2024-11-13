@@ -48,6 +48,7 @@ const images = [
 const ImageCarousel = () => {
   const settings = {
     dots: false,
+    arrows: false,
     infinite: true,
     speed: 500,
     slidesToShow: 4, // Show 4 images per slide

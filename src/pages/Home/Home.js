@@ -1,7 +1,7 @@
 import ColoredDivider from "../../components/coloredHr/coloredDivider";
 import HeroCarousel from "../../components/heroCarousel/herocarousel";
 import HeroSection from "../../components/heroSection/HeroSection";
-import HeroText from "../../components/heroText/heroText";
+import DynamicTextComponent from "../../components/DynamicTextComponent/DynamicTextComponent";
 import ImageAndVideo from "../../components/ImageAndVideo/imageAndVideo";
 import ImageCarousel from "../../components/ImageGallery/imageGallery";
 import ProductsCardsCarousel from "../../components/ProductsCardsCarousel/productsCardsCarousel";
@@ -79,19 +79,19 @@ function Home() {
     return (
         <div>
             <HeroSection />
-            <HeroText heading={"Boost Up Your Gaming Experience"} description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`} />
+            <DynamicTextComponent heading={"Boost Up Your Gaming Experience"} description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`} />
             <HeroCarousel />
             <ProductsCardsCarousel />
             <ProductsCarousel products={products} />
             <ColoredDivider />
             <ImageAndVideo img={"./images/flayers/sample.png"} vid={"./videos/heroVid.mp4"} />
-            <HeroText heading={"Boost Up Your Gaming Experience"} description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`} />
+            <DynamicTextComponent heading={"Boost Up Your Gaming Experience"} description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`} />
             <HeroCarousel />
             <ProductsCardsCarousel />
             <ProductsCarousel products={products} />
             <ColoredDivider />
             <ImageAndVideo img={"./images/flayers/sample.png"} vid={"./videos/heroVid.mp4"} />
-            <HeroText heading={"Trending Products"} description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`} />
+            <DynamicTextComponent heading={"Trending Products"} description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`} />
             <ImageCarousel />
         </div>
     );

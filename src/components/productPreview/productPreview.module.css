@@ -83,6 +83,7 @@
 .varient-image-container {
     width: fit-content;
     height: fit-content;
+    display: flex;
     margin: 5px 0px 10px 0px;
 }
 
@@ -109,7 +110,6 @@
     width: 70px;
     background: none;
     border: 1px solid rgb(220, 220, 220);
-    border-right: none;
     color: rgb(220, 220, 220);
     cursor: pointer;
     box-sizing: border-box;
