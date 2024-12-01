@@ -4,22 +4,20 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 const slides = [
   {
-      title: "Boost Up Your Audio Experience",
-      description: "Discover amazing products and browse throught a huge collection.",
-      buttonText: "Learn More",
-      backgroundImage: "https://via.placeholder.com/1920x1080"
-  },
-  {
-      title: "Slide 2",
-      description: "Description for Slide 2",
-      buttonText: "Button 2",
-      backgroundImage: "./images/flayers/sample.png",
-  },
-  {
-      title: "Slide 3",
-      description: "Description for Slide 3",
-      buttonText: "Button 3",
-      backgroundImage: "./images/flayers/sample.png",
+    title: "Boost Up Your Audio Experience",
+    description: "Discover amazing products and browse throught a huge collection.",
+    buttonText: "Learn More",
+    backgroundImage: "./images/flayers/mouse.jpeg"
+  }, {
+    title: "Boost Up Your Audio Experience",
+    description: "Discover amazing products and browse throught a huge collection.",
+    buttonText: "Learn More",
+    backgroundImage: "./images/flayers/queen.jpeg"
+  }, {
+    title: "Boost Up Your Audio Experience",
+    description: "Discover amazing products and browse throught a huge collection.",
+    buttonText: "Learn More",
+    backgroundImage: "./images/flayers/mouse.jpeg"
   },
 ];
 

@@ -10,15 +10,10 @@ const HeroSection = () => {
 
   // Use provided items
   const items = [
-    { type: 'image', src: './images/flayers/sample.png' },
     { type: 'video', src: './videos/heroVid.mp4' },
-    { type: 'image', src: './images/flayers/sample.png' },
     { type: 'video', src: './videos/heroVid.mp4' },
-    { type: 'image', src: './images/flayers/sample.png' },
     { type: 'video', src: './videos/heroVid.mp4' },
-    { type: 'image', src: './images/flayers/sample.png' },
     { type: 'video', src: './videos/heroVid.mp4' },
-    { type: 'image', src: './images/flayers/sample.png' },
     { type: 'video', src: './videos/heroVid.mp4' },
   ];
 

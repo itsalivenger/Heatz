@@ -15,11 +15,16 @@
     top: 25px;
     z-index: 1;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
 }
 
 .navbar-logo .logo-icon {
     font-size: 24px;
     color: rgb(0, 228, 137);
+}
+
+.mobile-logo {
+    display: none;
 }
 
 .navbar-links {
@@ -37,6 +42,32 @@
     font-size: 13px;
     letter-spacing: 1px;
     transition: transform 0.3s ease-in-out;
+}
+
+.info-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.info-text {
+    visibility: hidden;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    white-space: nowrap;
+}
+
+.info-container:hover .info-text {
+    visibility: visible;
+    opacity: 1;
 }
 
 .linksContainer {
@@ -121,6 +152,16 @@
     .navbar-links {
         flex-direction: column;
         gap: 2em;
+    }
+
+    .mobile-logo {
+        display: block;
+        font-size: 24px;
+        color: rgb(0, 228, 137);
+    }
+
+    .mobile-logo img{
+        width: 100px;
     }
 
     .closeBtnContainer {

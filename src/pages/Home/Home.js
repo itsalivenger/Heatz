@@ -1,17 +1,17 @@
 import ColoredDivider from "../../components/coloredHr/coloredDivider";
 import HeroCarousel from "../../components/heroCarousel/herocarousel";
 import HeroSection from "../../components/heroSection/HeroSection";
-import DynamicTextComponent from "../../components/DynamicTextComponent/DynamicTextComponent";
+import TitleAndText from "../../components/TitleAndText/TitleAndText";
 import ImageAndVideo from "../../components/ImageAndVideo/imageAndVideo";
-import ImageCarousel from "../../components/ImageGallery/imageGallery";
 import ProductsCardsCarousel from "../../components/ProductsCardsCarousel/productsCardsCarousel";
 import ProductsCarousel from "../../components/ProductsCarousel/productsCarousel";
+import VideoCarousel from "../../components/ImageGallery/videoCarousel";
 
 
 const products = [
     {
       id: 1,
-      imageSrc: 'https://via.placeholder.com/150',
+      imageSrc: './images/products/headset1.png',
       note: 'best seller',
       title: 'Wireless Bluetooth Headphones',
       description: 'High-quality wireless headphones with noise cancellation and 20-hour battery life',
@@ -19,7 +19,7 @@ const products = [
     },
     {
       id: 2,
-      imageSrc: 'https://via.placeholder.com/150',
+      imageSrc: './images/products/headset2.png',
       note: 'best seller',
       title: 'Smart Fitness Watch',
       description: 'Track your health and fitness with this advanced smartwatch featuring heart rate monitoring',
@@ -27,7 +27,7 @@ const products = [
     },
     {
       id: 3,
-      imageSrc: 'https://via.placeholder.com/150',
+      imageSrc: './images/products/headset3.png',
       note: 'best seller',
       title: 'Portable Power Bank',
       description: '20000mAh high-capacity power bank with fast charging capabilities',
@@ -35,7 +35,7 @@ const products = [
     },
     {
       id: 4,
-      imageSrc: 'https://via.placeholder.com/150',
+      imageSrc: './images/products/headset4.png',
       note: 'best seller',
       title: 'Ultra HD Webcam',
       description: '4K webcam perfect for streaming and video conferencing with auto-focus',
@@ -43,7 +43,7 @@ const products = [
     },
     {
       id: 5,
-      imageSrc: 'https://via.placeholder.com/150',
+      imageSrc: './images/products/headset1.png',
       note: 'best seller',
       title: 'Mechanical Gaming Keyboard',
       description: 'RGB backlit mechanical keyboard with customizable keys and macro support',
@@ -51,7 +51,7 @@ const products = [
     },
     {
       id: 6,
-      imageSrc: 'https://via.placeholder.com/150',
+      imageSrc: './images/products/headset2.png',
       note: 'best seller',
       title: 'Ergonomic Mouse',
       description: 'Comfortable wireless mouse with adjustable DPI and ergonomic design',
@@ -59,7 +59,7 @@ const products = [
     },
     {
       id: 7,
-      imageSrc: 'https://via.placeholder.com/150',
+      imageSrc: './images/products/headset3.png',
       note: 'best seller',
       title: 'USB-C Hub',
       description: '7-in-1 USB-C hub with HDMI, USB 3.0, and card reader ports',
@@ -67,7 +67,7 @@ const products = [
     },
     {
       id: 8,
-      imageSrc: 'https://via.placeholder.com/150',
+      imageSrc: './images/products/headset4.png',
       note: 'best seller',
       title: 'Wireless Charging Pad',
       description: 'Fast wireless charging pad compatible with all Qi-enabled devices',
@@ -79,20 +79,20 @@ function Home() {
     return (
         <div>
             <HeroSection />
-            <DynamicTextComponent heading={"Boost Up Your Gaming Experience"} description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`} />
+            <TitleAndText title={"Boost Up Your Gaming Experience"} text={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`} />
             <HeroCarousel />
             <ProductsCardsCarousel />
             <ProductsCarousel products={products} />
             <ColoredDivider />
-            <ImageAndVideo img={"./images/flayers/sample.png"} vid={"./videos/heroVid.mp4"} />
-            <DynamicTextComponent heading={"Boost Up Your Gaming Experience"} description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`} />
+            <ImageAndVideo img={"./images/flayers/gaming.jpeg"} vid={"./videos/hero2.mp4"} />
+            <TitleAndText title={"Boost Up Your Gaming Experience"} text={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`} />
             <HeroCarousel />
             <ProductsCardsCarousel />
             <ProductsCarousel products={products} />
             <ColoredDivider />
-            <ImageAndVideo img={"./images/flayers/sample.png"} vid={"./videos/heroVid.mp4"} />
-            <DynamicTextComponent heading={"Trending Products"} description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`} />
-            <ImageCarousel />
+            <ImageAndVideo img={"./images/flayers/watch.jpeg"} vid={"./videos/hero2.mp4"} />
+            <TitleAndText title={"Trending Products"} text={`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.`} />
+            <VideoCarousel />
         </div>
     );
 }

@@ -6,6 +6,10 @@
     padding: 150px 0;
 }
 
+.inputContainer span{
+    color: #00ff9d;
+}
+
 .pseudo-body {
     display: flex;
     flex-direction: column;
@@ -89,6 +93,7 @@
     font-size: 1rem;
     cursor: pointer;
     margin: 30px 0px 20px 0px;
+    transition: background-color .2s ease-in-out;
 }
 
 .login-btn:hover {

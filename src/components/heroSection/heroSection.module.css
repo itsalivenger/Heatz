@@ -1,7 +1,8 @@
 .carouselContainer {
     position: relative;
-    width: 100%; /* Full width */
-    height: auto; /* Let height adjust automatically */
+    width: 100%;
+    padding: 70px 0;
+    height: auto;
     overflow: hidden;
   }
   
@@ -22,7 +23,7 @@
     display: flex;
     justify-content: center;
     position: absolute;
-    bottom: 60px;
+    bottom: 15%;
     width: 100%;
   }
   
@@ -60,3 +61,9 @@
     object-fit: cover;
   }
   
+
+  @media screen and (max-width: 600px) {
+    .navigationContainer {
+      display: none;
+    }
+  }
